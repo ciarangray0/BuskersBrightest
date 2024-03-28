@@ -12,7 +12,7 @@ function isAuth(to, from, next) {
         } else {
             // User is signed out
             // Send them back to the home page or maybe the login page
-            return next({ path: '/' });
+            return next({ path: '/login' });
         }
     });
 }
@@ -29,5 +29,11 @@ export default [
     { path: '/login', component: loadPage('Login') },
     { path: '/secure', component: loadPage('Secure'), beforeEnter : isAuth },
     { path: '/upload', component: loadPage('Upload') },
-    { path: '/queue', component: loadPage('Queue') }
+    { path: '/queue', component: loadPage('Queue') },
+    { path: '/stafflogin', component: loadPage('StaffLogin') },
+    { path: '/staff', component: loadPage('Staff') },
+    { path: '/menu', component: loadPage('Menu') },
+    { path: '/cart', component: loadPage('Cart') },
+    { path: '/orderConfirmation', component: loadPage('OrderConfirmation') },
+    { path: '/viewproducts', component: loadPage('ViewProducts') }
 ]
